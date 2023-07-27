@@ -1,15 +1,21 @@
 import React from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { SHADOW_STYLE, colors, dimensions, fontSizes, styleGuide } from '../styles/globalStyles';
+import { AddressAction } from '../store/addressSlice';
+import { useDispatch } from 'react-redux';
 
 
 const AddressItem = ({ addressSubtitle = "", addressTitle = '' }) => {
+  const dispatch = useDispatch()
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => dispatch(AddressAction.updateCurrentValue(addressTitle))}
+    >
       <Text style={styles.title}>{`${addressTitle}: `}
         <Text style={styles.subtitle}>{addressSubtitle}</Text>
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
