@@ -30,10 +30,8 @@ const styles = StyleSheet.create({
     fontSize: styleGuide.titleTextSize,
     fontWeight: styleGuide.titleTextWeight,
     color: colors.dark,
-    fontSize: fontSizes.fs18,
   },
   subtitle: {
-    fontSize: styleGuide.titleTextSize,
     fontWeight: styleGuide.titleTextWeight,
     color: colors.dark,
     fontSize: fontSizes.fs14
