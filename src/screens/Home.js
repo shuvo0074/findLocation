@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList, SafeAreaView, TextInput, StatusBar, Image } from 'react-native';
 
-import { AddressItem } from '../components';
+import { AddressItem, EmptyList } from '../components';
 import useHomeAddressController from '../view-controllers/useHomeAddressController';
 import { colors, dimensions, fontSizes, fontWeights, styleGuide } from '../styles/globalStyles';
 import { ASSETS } from '../assets';
@@ -37,6 +37,7 @@ const HomeScreen = () => {
           contentContainerStyle={{
             backgroundColor: colors.white,
           }}
+          ListEmptyComponent={()=><EmptyList/>}
         />
       </View>
     </View>
