@@ -18,11 +18,11 @@ const HomeScreen = () => {
           style={styles.flagIcon}
         />
         <TextInput
-          textAlign='center'
           value={currentVal}
           onChangeText={onEditValue}
           style={styles.inputStyle}
           cursorColor={colors.secondary}
+          placeholder='Type location'
         />
       </View>
       <View style={styles.addressListView}>
