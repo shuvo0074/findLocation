@@ -38,6 +38,7 @@ const useAddressViewModel = () => {
     },
     onEditValue: (val) =>
       dispatch(updateCurrentValue(val)),
+    removeAddressList: _ => dispatch(setAddressList([]))
   };
 };
 

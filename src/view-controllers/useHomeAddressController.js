@@ -3,11 +3,13 @@ import useAddressViewModel from '../view-models/useAddressViewModel';
 
 
 const useHomeAddressController = () => {
-  const { currentVal, addressList, fetchAddress, onEditValue, fetchCurrentLocation } = useAddressViewModel();
+  const { currentVal, addressList, fetchAddress, onEditValue, fetchCurrentLocation, removeAddressList } = useAddressViewModel();
 
   useEffect(() => {
     if (currentVal.length)
       fetchAddress();
+    else
+      removeAddressList()
   }, [currentVal]);
 
   useEffect(() => {
